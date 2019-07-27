@@ -1,3 +1,38 @@
 .jumbotron{
   text-align: center;
 }
+@font-face {
+  font-family: 'atreyuregular';
+  src: url('typeface/atreyu-webfont.woff2') format('woff2'),
+       url('typeface/atreyu-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'abraham_lincolnregular';
+  src: url('typeface/abrahamlincoln-webfont.woff2') format('woff2'),
+       url('typeface/abrahamlincoln-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+h1{
+  font-family: 'atreyuregular' !important; 
+  font-size: 80px !important;
+}
+#hello{
+  font-size: 50px;
+  font-family: 'abraham_lincolnregular';
+  
+}
+.lead{
+  font-family: 'abraham_lincolnregular';
+  font-size: 24px !important;
+  letter-spacing: 3px;
+}
+#proverb{
+  font-family: 'atreyuregular';
+  font-size: 18px;
+  letter-spacing: 2px;
+}
