@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {})
   let trainName = $('#name').val().trim();
  	let trainDestination = $('#destination').val().trim();
  	let trainDeparture = $('#departure').val().trim();
@@ -10,7 +10,7 @@ $(document).ready(function() {
  	console.log(trainDestination)
  	console.log(trainDeparture)
   console.log(trainFrequency)
-  console.log('CURRENT TIME: ' + moment(currentTime).format('hh:mm:ss A'));
+  console.log('CURRENT TIME: ' + moment(currentTime).format('hh:mm:ss A'));*/
 
   var firebaseConfig = {
     apiKey: "AIzaSyApgFiZLePsuQKK7czF8uMSgwA9o8BBhRg",
@@ -21,6 +21,14 @@ $(document).ready(function() {
     messagingSenderId: "231354534972",
     appId: "1:231354534972:web:c651acae66e4a968"
   };
-  // Initialize Firebase
+  // Initialize Firebase 
   firebase.initializeApp(firebaseConfig);
-})
+  var database = firebase.database();
+  var clickCounter = 0;
+  $("#click-button").on("click", function() {
+    clickCounter++;
+    database.ref().set({
+      clickCount: clickCounter
+    });
+  });
+
