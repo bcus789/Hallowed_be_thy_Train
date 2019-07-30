@@ -1,4 +1,13 @@
 $(document).ready(function() {
+  function displayTime() {
+    var time = moment().format('HH:mm:ss');
+    $('#clock').html(time);
+    setTimeout(displayTime, 1000);
+}
+
+$(document).ready(function() {
+    displayTime();
+});
 
 var firebaseConfig = {
   apiKey: "AIzaSyApgFiZLePsuQKK7czF8uMSgwA9o8BBhRg",
@@ -58,11 +67,9 @@ database.ref().on("child_added", function(snapshot){
   console.log(currentTime);
 
   let trainDepartureConverted = moment(trainDeparture, "hh:mm").subtract(1, "years");
-	  console.log(trainDepartureConverted);
+	//console.log(trainDepartureConverted);
   let diffTime = moment().diff(moment(trainDepartureConverted), "minutes");
-	console.log("difference in time " + diffTime);
-
-  
+	//console.log("difference in time " + diffTime);
   let tRemainder = diffTime % frequency;
   let minutesAway = frequency - tRemainder;
   let nextTime = moment().add(minutesAway, "minutes");
