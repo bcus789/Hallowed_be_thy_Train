@@ -1,7 +1,5 @@
 # Hallowed Be Thy Train
 
-![Image description](train.png)
-
 A simple a sleak application for any man of the cloth to use. In accordance with old testament values. Inoperable on sunday.  
 
 ## Getting Started
